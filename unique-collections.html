@@ -136,6 +136,47 @@
             line-height: 1.8;
         }
 
+        /* Quality Section */
+        .quality-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .quality-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .quality-text {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .quality-text:hover {
+            transform: scale(1.05);
+        }
+
+        .quality-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .quality-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
         /* Collections Section */
         .collections {
             padding: 4rem 0;
@@ -313,6 +354,16 @@
             text-decoration: underline;
         }
 
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-content h1 {
@@ -335,6 +386,10 @@
             }
 
             .collection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quality-section {
                 grid-template-columns: 1fr;
             }
         }
@@ -376,6 +431,26 @@
                 <div>
                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
                         👗
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quality & Cheaper Prices Section -->
+            <div class="quality-section">
+                <div class="quality-box">
+                    <div class="quality-text quality-1">
+                        ⭐ QUALITY ⭐
+                    </div>
+                    <div class="quality-text quality-2">
+                        💰 CHEAPER PRICES 💰
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 10px; text-align: center; color: white;">
+                        <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>Best in Class Quality</strong></p>
+                        <p style="font-size: 0.95rem; line-height: 1.6;">
+                            We guarantee premium quality dresses at the most affordable prices in the market. Every piece is carefully inspected and crafted with perfection.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -472,14 +547,14 @@
                     <p>Quick and reliable delivery to your doorstep within 3-5 business days.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💳</div>
-                    <h3>Secure Payment</h3>
-                    <p>Multiple payment options with guaranteed security and privacy.</p>
+                    <div class="feature-icon">💬</div>
+                    <h3>WhatsApp Payment</h3>
+                    <p>Payment options available on WhatsApp for your convenience.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
-                    <h3>Easy Returns</h3>
-                    <p>30-day return policy for complete customer satisfaction.</p>
+                    <h3>7-Day Returns</h3>
+                    <p>Easy 7-day return policy for complete customer satisfaction.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👥</div>
@@ -509,9 +584,8 @@
                     <p><a href="tel:+917780748802">+91 7780748802</a></p>
                 </div>
                 <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>Sai Thulasi Fashion Store</p>
-                    <p>123 Fashion Street, Style City, SC 12345</p>
+                    <h3>💬 WhatsApp</h3>
+                    <p><a href="https://wa.me/917780748802" target="_blank">Chat on WhatsApp +91 7780748802</a></p>
                 </div>
             </div>
         </div>
@@ -521,7 +595,10 @@
     <footer>
         <p>&copy; 2024 Unique Collections. All rights reserved.</p>
         <p>📧 Email: <a href="mailto:saithulasi999@gmail.com">saithulasi999@gmail.com</a> | 📱 Phone: <a href="tel:+917780748802">+91 7780748802</a></p>
-        <p>Follow us on <strong>Instagram</strong> | <strong>Facebook</strong> | <strong>Twitter</strong></p>
+        <div class="social-links">
+            <p><strong>Follow Us:</strong></p>
+            <p>📸 Instagram: <a href="https://instagram.com/uniquecollections_010" target="_blank">@uniquecollections_010</a></p>
+        </div>
     </footer>
 </body>
 </html>
